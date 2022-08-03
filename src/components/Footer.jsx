@@ -11,7 +11,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  background-color: wheat;
+  background-color: aliceblue;
 `;
 
 const Left = styled.div`
@@ -88,7 +88,7 @@ const Footer = () => {
         <Desc>
           There are many varities of products you may find here easily. Your
           valueable items will be delivered to you without any issues. Stay with
-          us for more exclusive products
+          us for exclusive products.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
