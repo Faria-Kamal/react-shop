@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-shop/static/js/main.80685bad.js",
+    "main.js": "/react-shop/static/js/main.1365c2bd.js",
     "index.html": "/react-shop/index.html",
-    "main.80685bad.js.map": "/react-shop/static/js/main.80685bad.js.map"
+    "main.1365c2bd.js.map": "/react-shop/static/js/main.1365c2bd.js.map"
   },
   "entrypoints": [
-    "static/js/main.80685bad.js"
+    "static/js/main.1365c2bd.js"
   ]
 }
