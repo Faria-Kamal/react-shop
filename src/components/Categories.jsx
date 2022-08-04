@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { categories } from "../data";
 import CategoryItem from "./CategoryItem";
+import { device } from "../responsive";
 
 const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-`;
-
-const Category = styled.div`
-  margin-top: 1rem;
-  justify-content: center;
+  @media ${device.mobileM} {
+    padding: 0px;
+    flex-direction: column;
+  }
 `;
 
 const Categories = () => {

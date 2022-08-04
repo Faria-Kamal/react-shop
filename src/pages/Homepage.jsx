@@ -9,10 +9,19 @@ import Category from "../components/Category";
 import AllProducts from "../components/AllProducts";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import styled from "styled-components";
+import { device } from "../responsive";
+
+const Container = styled.div`
+  scroll-behavior: smooth;
+  @media ${device.laptop} {
+    scroll-behavior: smooth;
+  }
+`;
 
 const Homepage = () => {
   return (
-    <div>
+    <Container>
       <Announcement />
       <Navbar />
       <Slider />
@@ -22,7 +31,7 @@ const Homepage = () => {
       <Products />
       <Newsletter />
       <Footer />
-    </div>
+    </Container>
   );
 };
 

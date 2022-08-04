@@ -1,17 +1,24 @@
+import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import { Badge } from "@material-ui/core";
+import { device } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+  @media ${device.mobileM} {
+    height: 50px;
+  }
 `;
 
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  @media ${device.mobileM} {
+    padding: 10px 0px;
+  }
 `;
 
 const Left = styled.div`
@@ -23,6 +30,9 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  @media ${device.mobileM} {
+    display: none;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -30,10 +40,14 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
+  padding: 5px;
 `;
 
 const Input = styled.input`
   border: none;
+  @media ${device.mobileM} {
+    width: 50px;
+  }
 `;
 
 const Center = styled.div`
@@ -43,19 +57,29 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  @media ${device.mobileM} {
+    font-size: 18px;
+  }
 `;
-
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media ${device.mobileM} {
+    flex: 2;
+    justify-content: center;
+  }
 `;
 
 const MenuItem = styled.div`
-font-size14px;
-cursor: pointer;
-margin-left: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  @media ${device.mobileM} {
+    font-size: 12px;
+    margin-left: 10px;
+  }
 `;
 
 const Navbar = () => {
@@ -65,18 +89,18 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
-            <Search style={{ color: "gray", fontsize: 16 }} />
+            <Input placeholder="Search" />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
           <Logo>SHOP ONLINE.</Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem>REGISTER</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge badgeContent={1} color="primary">
+            <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
